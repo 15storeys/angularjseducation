@@ -3,9 +3,11 @@
 
 	app.controller('StoreController', function(){
 		// do some controlling here. Note controller is inside the app (app.controller)
-		this.product = gem;
+		this.products = gems;
 	});
 	
-	var gem = { name: 'Dodecahedron', price: 2.95, description: 'Some gems have hidden qualities'};
-	
+	var gems = [
+				{ name: 'Dodecahedron', price: 2.95, description: 'Some gems have hidden qualities', canPurchase: true, soldOut: false},
+				{ name: 'Pentagonal Gem', price: 5.95, description: 'Five five five', canPurchase: false, soldOut: false}
+			];
 })();
