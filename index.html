@@ -15,7 +15,7 @@
 		<ul class="list-group">
 			<li class="list-group-item" ng-repeat="product in store.products">
 				<!-- product title -->
-				<product-title></product-title>
+				<h3><product-title></product-title></h3>
 				<section ng-controller="PanelController as panel">
 					<ul class="nav nav-pills">
 						<li ng-class="{ active:panel.isSelected(1) }"> <a href ng-click="panel.selectTab(1)">Description</a></li>
