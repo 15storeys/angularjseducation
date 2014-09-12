@@ -1,5 +1,5 @@
 (function(){
-	var app = angular.module('store', []);
+	var app = angular.module('store', ['store-products']);
 
 	app.controller("StoreController", function(){
 		// do some controlling here. Note controller is inside the app (app.controller)
@@ -27,12 +27,7 @@
 		};		
 	});
 	
-	app.directive('productTitle', function(){
-		return {
-			restrict: 'E',
-			templateUrl: 'product-title.html'
-		};
-	});
+	
 	
 	var gems = [
 				{ 
