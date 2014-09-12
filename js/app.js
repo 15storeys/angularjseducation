@@ -1,10 +1,15 @@
 (function(){
 	var app = angular.module('store', ['store-products']);
 
-	app.controller("StoreController", function(){
+	app.controller("StoreController", [ '$http',function($http){
 		// do some controlling here. Note controller is inside the app (app.controller)
-		this.products = gems;
-	});
+		//this.products = gems; we want to get the data from an API instead
+		var store = this;
+		store.products = [];
+		$http.get('store-products.json').success(function(data){
+			store.products = data;
+		});
+	}]);
 	
 	app.controller("PanelController", function(){
 		this.tab=1;
